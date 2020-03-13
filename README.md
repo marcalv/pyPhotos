@@ -1,6 +1,8 @@
 # pyPhotos
 Sync media files to Google Photos on Android without Google Play Services. Based on [eshmu's gphotos-upload](https://github.com/eshmu/gphotos-upload).
 
+![](https://github.com/marcalv/media_files/raw/master/pyPhotos/demo-small.gif)
+
 ## Setup
 
 ### 1. Obtaining a Google Photos API key
