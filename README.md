@@ -1,5 +1,5 @@
 # pyPhotos
-Sync pictures and videos to Google Photos on Android without Google Play Services
+Sync media files to Google Photos on Android without Google Play Services. Based on [eshmu's gphotos-upload](https://github.com/eshmu/gphotos-upload).
 
 ## Setup
 
