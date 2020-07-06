@@ -28,6 +28,7 @@ echo ""
 read -p "Once permission is granted, press Enter to continue"
 
 #Install packages and dependencies
+pkg install openssl
 pkg install python -y
 pip install pipenv
 pip install --upgrade pip
