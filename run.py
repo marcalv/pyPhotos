@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 from folders import folders as imported_folders
 from tinydb import TinyDB, Query
-
+import subprocess
 
 
 def upload_folder(path):
@@ -26,8 +26,11 @@ def get_folder_files(folder):
     return files_array
 
 def upload_file(file):
-    os.system('python upload.py --auth auth.txt "'+file+'"')
-    return True
+    completedProc = subprocess.run(['python','upload.py','--auth', 'auth.txt',file])
+    if completedProc.returncode == 0:
+        return True
+    else:
+        return False
 
 def generate_auth():
     os.system('python upload.py --auth auth.txt')
@@ -36,7 +39,6 @@ def generate_auth():
 def db_insert(file):
     Search = Query()
     if not file_is_backedup(file):
-    
         db.insert({'file': file})
 
 def file_is_backedup(file):
